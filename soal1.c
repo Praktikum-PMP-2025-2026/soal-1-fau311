@@ -21,6 +21,7 @@ void SumandAvg(int *arr, int n, int *sum, float *avg){
 
 void MaxandIdx(int *arr, int n, int *max, int *idx){
     *max = arr[0];
+    *idx = 0;
     for(int i = 0; i < n; i++){
         if(arr[i] > *max){
             *max = arr[i];
