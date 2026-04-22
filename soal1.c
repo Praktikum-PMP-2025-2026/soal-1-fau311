@@ -11,18 +11,15 @@ Deskripsi           : Fungsi analisis yang dapat melaporkan jumlah, rata-rata, n
 
 #include <stdio.h>
 
-void findSum(int *arr, int n, int *sum){
+void SumandAvg(int *arr, int n, int *sum, float *avg){
     *sum = 0;
     for(int i = 0; i < n; i++){
         *sum = *sum + arr[i];
     }
-}
-
-void findAvg(int n, int *sum, float *avg){
     *avg = (float)*sum/n;
 }
 
-void findMax(int *arr, int n, int *max, int *idx){
+void MaxandIdx(int *arr, int n, int *max, int *idx){
     *max = arr[0];
     for(int i = 0; i < n; i++){
         if(arr[i] > *max){
@@ -44,9 +41,8 @@ int main(){
     float avg;
 
     // pindahkan fungsi ke main
-    findSum(arr, n, &sum);
-    findAvg(n, &sum, &avg);
-    findMax(arr, n, &max, &idx);
+    SumandAvg(arr, n, &sum, &avg);
+    MaxandIdx(arr, n, &max, &idx);
 
     // output
     printf("SUM %d\n", sum);
