@@ -51,6 +51,7 @@ int main(){
     printf("MAX %d\n", max);
     printf("IDX %d\n", idx);
 
+    return 0;
 }
 
 // REFERENSI 
